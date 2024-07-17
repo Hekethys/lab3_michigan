@@ -2,12 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
+    private int id;
     private List<OrderObserver> observers = new ArrayList<>();
     private List<Item> items = new ArrayList<>();
     private double totalPrice;
     private int totalQuantity;
     private double shippingCost = 10.0;
     private boolean discountApplied = false;
+
+    public Order(int id) {
+        this.id = id;
+    }
 
     public void attach(OrderObserver observer) {
         observers.add(observer);
@@ -51,9 +56,14 @@ public class Order {
         this.discountApplied = discountApplied;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String toString() {
         return "Order{" +
-                "totalPrice=" + totalPrice +
+                "id=" + id +
+                ", totalPrice=" + totalPrice +
                 ", totalQuantity=" + totalQuantity +
                 ", shippingCost=" + shippingCost +
                 '}';
