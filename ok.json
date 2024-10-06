@@ -1,1 +1,8 @@
-https://anisette-v3-server-ro79.onrender.com
+{
+    "servers": [
+        {
+            "name": "Ok",
+            "address": "https://anisette-v3-server-ro79.onrender.com"
+        }
+    ]
+}
